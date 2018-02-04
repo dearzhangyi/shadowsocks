@@ -1,0 +1,29 @@
+    
+tutum/centos:centos6/7
+
+
+
+    1  yum install git
+    2  git clone -b manyuser https://github.com/breakwa11/shadowsocks.git
+    3  cd shadowsocks
+    4  vi config.json
+    5  cp config.json user-config.json
+    6  cd shadowsocks
+    7  python server.py -d start
+
+
+
+yum install git
+
+git clone -b manyuser https://github.com/breakwa11/shadowsocks.git
+
+进入shadowsocks文件夹之后
+
+先执行bash initcfg.sh
+
+然后再编辑userapiconfig.py
+编辑为mudbjson
+
+python mujson_mgr.py -a -u username -p 8000 -k password -m aes-256-cfb -O origin -o http_simple
+ 
+最后执行./run.sh 或者是./logrun.sh
